@@ -6,6 +6,7 @@ export function Home() {
   const [students, setStudents] = useState([])
 
   function handleAddStudent(){
+    console.log("SOu muito gato")
     const newStudent = {
       name: setStudentname,
       time: new Date().toLocaleTimeString("pt-BR",{
