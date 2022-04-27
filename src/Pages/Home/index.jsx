@@ -6,10 +6,10 @@ export function Home() {
   const [studentName, setStudentname] = useState("")
   const [students, setStudents] = useState([])
 
-  function handleAddStudent(){
+  function handleAddStudent() {
     const newStudent = {
       name: studentName,
-      time: new Date().toLocaleTimeString("pt-BR",{
+      time: new Date().toLocaleTimeString("pt-BR", {
         hour: '2-digit',
         minute: '2-digit',
         second: '2-digit'
@@ -21,12 +21,22 @@ export function Home() {
 
   return (
     <div className='container'>
-      <h1>Lista de presença</h1>
+      <header
+      ><h1>Lista de presença</h1>
+        <div>
+          <strong>Fernando</strong>
+          <img src="https://github.com/AfonsoFernando051.png" alt="Foto de Perfil" />
+        </div>
+      </header>
       <input type="text" placeholder="Digite o nome..."
         onChange={(e) => setStudentname(e.target.value)}></input>
       <button type="button" onClick={handleAddStudent}>Adicionar</button>
 
-      {students.map((student) => (<Card name={student.name} time={student.time} />))}
+      {students.map((student) =>
+      (<Card
+        key={student.time}
+        name={student.name}
+        time={student.time} />))}
 
     </div>
   )

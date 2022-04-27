@@ -1,15 +1,32 @@
-.container{
+.container {
     display: flex;
     align-items: center;
     flex-direction: column;
 
 }
 
-.container h1{
+.container header {
     margin: 84px 0px 24px;
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.container input{
+.container header img {
+    width: 60px;
+    height: 60px;
+    border-radius: 30px;
+    margin-left: 7px;
+}
+
+.container head div {
+    display: flex;
+    align-items: center;
+
+}
+
+.container input {
     width: 50%;
     padding: 24px;
 
@@ -19,11 +36,11 @@
     font-size: 16px;
 }
 
-.container button{
+.container button {
     width: 50%;
     padding: 24px;
     font-weight: 700;
-    
+
     background: #EA4C89;
     color: #FFFFFF;
 
@@ -36,13 +53,15 @@
     transition: filter 0.2s;
 }
 
-.container button:hover{
+.container button:hover {
     filter: brightness(0.9);
 }
 
-body, input, button{
+body,
+input,
+button {
     font-size: 16px;
     font-family: 'Roboto', sans-serif;
-    
+
     -webkit-font-smoothing: antialised;
 }
